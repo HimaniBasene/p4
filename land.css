@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: light gilroy;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+}
+.bg-img{
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0);
+  animation: grow 2s ease-out 0.8s forwards;
+}
+.bg-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.navbar{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.5rem;
+    transition: all 0.3s;
+    opacity: 0;
+    animation: animate3 3s ease forwards;
+}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar ul li a{
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: capitalize;
+    transition: all 0.3s;
+}
+.navbar ul li a:hover{
+    color: gray;
+}
+.navbar .logo a{
+    font-size: 1.8rem;
+    color: #fff;
+}
+.text{
+    position: absolute;
+    top: 40%;
+    padding: 0 3.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+.text h1{
+    opacity: 0;
+    animation: animate 3s ease forwards;
+    font-weight: 500;
+}
+.text h1 span{
+    background-color: rgb(31, 30, 30);
+    padding: 0.3rem 0.5rem;
+    display: inline-block;
+    transform: translateX(50px);
+    opacity: 0;
+    animation: animate2 1s ease-in 2s forwards;
+    border-radius: 5px;
+}
+.para{
+    padding: 0;
+    width: 20rem;
+    font-size: 1.2rem;
+    right: 3%;
+    transform: translate(50px);
+    opacity: 0;
+    animation: animate2 2s ease 2s forwards;
+}
+.line{
+    width: 0;
+    height: 0.01rem;
+    position: absolute;
+    background-color: rgb(39, 38, 38);
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: grow2 2s ease 2s forwards;
+}
+@keyframes grow2{
+    100%{
+        width: 92%;
+    }
+}
+@keyframes grow{
+    100%{
+        transform: scale(0.1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes animate{
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes animate2{
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes animate3{
+    100%{
+        opacity: 1;
+    }
+}
